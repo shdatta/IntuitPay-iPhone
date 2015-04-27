@@ -2,7 +2,7 @@
 import UIKit
 import CoreData
 
-class ProfileViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
+class ProfileViewController: UIViewController,UITableViewDataSource, UITableViewDelegate, PaymentViewProtocol {
 
     @IBOutlet var txtUserName: UITextField!
     @IBOutlet var txtPhone: UITextField!
@@ -11,6 +11,13 @@ class ProfileViewController: UIViewController,UITableViewDataSource, UITableView
     @IBOutlet var txtPin: UITextField!
     @IBOutlet var lstCreditCards: UITableView!
     
+     func postData(data:NSDictionary!) ->Void{
+        
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            self.lstCreditCards.reloadData()
+        })
+    }
+
     
     @IBAction func onAddProfile(sender: UIButton) {
         println("In add profile")

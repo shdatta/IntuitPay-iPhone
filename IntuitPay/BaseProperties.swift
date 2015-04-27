@@ -23,7 +23,11 @@ class BaseProperties {
     func save(data:NSDictionary!) ->Void{
     }
     
-    func postData(uiv:UIViewController!){//, callbackPost:(NSDictionary, BaseProperties, UIViewController!) -> Void){
+    func validate(id:String) ->String{
+        return ""
+    }
+    
+    func postData(uiv:PaymentViewProtocol!){//, callbackPost:(NSDictionary, BaseProperties, UIViewController!) -> Void){
         
         let appDel:AppDelegate = (UIApplication.sharedApplication().delegate) as! AppDelegate
         let context:NSManagedObjectContext = appDel.managedObjectContext!
@@ -49,13 +53,9 @@ class BaseProperties {
             var task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
                 var json = NSJSONSerialization.JSONObjectWithData(data, options: .MutableLeaves, error: &err) as? NSDictionary!
                 self.save(json!)
-                if let p = uiv as? ProfileViewController {
-                dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                                p.lstCreditCards.reloadData()
-                            })
-                    if let s = self as? ProfileInformation{
-                        appDel.phone_info = s
-                    }
+                uiv.postData(json!)
+                if let s = self as? ProfileInformation{
+                    appDel.phone_info = s
                 }
             })
             task.resume()

@@ -1,7 +1,7 @@
 import UIKit
 import Foundation
 
-class CrditCardViewController: UIViewController {
+class CrditCardViewController: UIViewController, PaymentViewProtocol {
 
     @IBOutlet var textCCNickName: UITextField!
     @IBOutlet var textCardNumber: UITextField!
@@ -9,11 +9,16 @@ class CrditCardViewController: UIViewController {
     @IBOutlet var textCVV: UITextField!
     @IBOutlet var textName: UITextField!
     
-    var parent:UIViewController!
+    var parent:PaymentViewProtocol!
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    func postData(data:NSDictionary!) ->Void{
+        
+    }
+
 
     override func shouldPerformSegueWithIdentifier(identifier: String!, sender: AnyObject?) -> Bool{
         var button : UIBarButtonItem = sender as! UIBarButtonItem

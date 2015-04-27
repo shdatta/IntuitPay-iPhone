@@ -21,6 +21,9 @@
 		1E1029CF1AB3FFE0002DA6DB /* CrditCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1029CE1AB3FFE0002DA6DB /* CrditCardViewController.swift */; };
 		1E4EF98A1AE81FB300999C35 /* ProfileInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4EF9891AE81FB300999C35 /* ProfileInformation.swift */; };
 		1E9A0AC01AE7064600643B49 /* IntuitPay.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1E9A0ABE1AE7064600643B49 /* IntuitPay.xcdatamodeld */; };
+		1EC1B0371AEEB8C100B4047D /* PayInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC1B0361AEEB8C100B4047D /* PayInformation.swift */; };
+		1EC1B0391AEEBE8200B4047D /* PaymentViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC1B0381AEEBE8200B4047D /* PaymentViewProtocol.swift */; };
+		1EC1B03B1AEEECA500B4047D /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC1B03A1AEEECA500B4047D /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +55,9 @@
 		1E1029CE1AB3FFE0002DA6DB /* CrditCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrditCardViewController.swift; sourceTree = "<group>"; };
 		1E4EF9891AE81FB300999C35 /* ProfileInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileInformation.swift; sourceTree = "<group>"; };
 		1E9A0ABF1AE7064600643B49 /* IntuitPay.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = IntuitPay.xcdatamodel; sourceTree = "<group>"; };
+		1EC1B0361AEEB8C100B4047D /* PayInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayInformation.swift; sourceTree = "<group>"; };
+		1EC1B0381AEEBE8200B4047D /* PaymentViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentViewProtocol.swift; sourceTree = "<group>"; };
+		1EC1B03A1AEEECA500B4047D /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,12 +102,15 @@
 				1E1029AA1AB3A10E002DA6DB /* AppDelegate.swift */,
 				1E9A0ABE1AE7064600643B49 /* IntuitPay.xcdatamodeld */,
 				1E1029AC1AB3A10E002DA6DB /* FirstViewController.swift */,
+				1EC1B03A1AEEECA500B4047D /* Utils.swift */,
+				1EC1B0381AEEBE8200B4047D /* PaymentViewProtocol.swift */,
 				1E1029AE1AB3A10E002DA6DB /* SecondViewController.swift */,
 				1E1029B01AB3A10E002DA6DB /* Main.storyboard */,
 				1E1029CC1AB3A686002DA6DB /* ProfileViewController.swift */,
 				1E1029CE1AB3FFE0002DA6DB /* CrditCardViewController.swift */,
 				1E0DD5F91ABA3E8E00F9A746 /* IntuitPay.plist */,
 				1E4EF9891AE81FB300999C35 /* ProfileInformation.swift */,
+				1EC1B0361AEEB8C100B4047D /* PayInformation.swift */,
 				1E1029B31AB3A10E002DA6DB /* Images.xcassets */,
 				1E1029B51AB3A10E002DA6DB /* LaunchScreen.xib */,
 				1E1029A81AB3A10E002DA6DB /* Supporting Files */,
@@ -239,13 +248,16 @@
 			files = (
 				1E1029AF1AB3A10E002DA6DB /* SecondViewController.swift in Sources */,
 				1E0DD5F61AB9FC1200F9A746 /* CreditCardInformation.swift in Sources */,
+				1EC1B0391AEEBE8200B4047D /* PaymentViewProtocol.swift in Sources */,
 				1E1029AB1AB3A10E002DA6DB /* AppDelegate.swift in Sources */,
+				1EC1B0371AEEB8C100B4047D /* PayInformation.swift in Sources */,
 				1E4EF98A1AE81FB300999C35 /* ProfileInformation.swift in Sources */,
 				1E1029CD1AB3A686002DA6DB /* ProfileViewController.swift in Sources */,
 				1E1029CF1AB3FFE0002DA6DB /* CrditCardViewController.swift in Sources */,
 				1E1029AD1AB3A10E002DA6DB /* FirstViewController.swift in Sources */,
 				1E0DD5F81ABA00B300F9A746 /* BaseProperties.swift in Sources */,
 				1E9A0AC01AE7064600643B49 /* IntuitPay.xcdatamodeld in Sources */,
+				1EC1B03B1AEEECA500B4047D /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

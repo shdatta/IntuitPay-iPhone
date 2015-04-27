@@ -10,14 +10,26 @@ class MyCell : UITableViewCell {
 }
 
 
-class FirstViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class FirstViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, PaymentViewProtocol {
     @IBOutlet var lstCards: UITableView!
     @IBOutlet var txtIntuitId: UITextField!
     @IBOutlet var txtAccountNumber: UITextField!
     @IBOutlet var txtNotes: UITextField!
     @IBOutlet var txtAmount: UITextField!
-    
     var id:String = "";
+    
+     func postData(data:NSDictionary!) ->Void{
+        println(data)
+        Utils.DisplayMessage("Id:" + (data.valueForKey("id") as! String) +
+            "\nStatus:" + (data.valueForKey("status") as! String) +
+            "\nAmount:" + (data.valueForKey("amount") as! String))
+    }
+
+    override func viewDidAppear(animated: Bool) {
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            self.lstCards.reloadData()
+        })
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,7 +90,22 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
         lastCell?.accessoryType = .None
     }
 
-    @IBAction func OnPat(sender: UIButton) {
+    @IBAction func OnPay(sender: UIButton) {
+
+
+        let payInfo : BaseProperties = PayInformation(
+            intuitId: txtIntuitId.text, accountNumber: txtAccountNumber.text!,
+            comments: txtNotes.text!, amount: txtAmount.text, cardId: id)
+        
+        let errMsg:String = payInfo.validate(id)
+        if !errMsg.isEmpty{
+            Utils.DisplayMessage(errMsg)
+            return
+        }
+        
+        let uiv:UIViewController = self as UIViewController;
+        payInfo.postData(self)
+
     }
 }
 

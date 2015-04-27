@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E0DD5F61AB9FC1200F9A746 /* CreditCardInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0DD5F51AB9FC1200F9A746 /* CreditCardInformation.swift */; };
+		1E0DD5F81ABA00B300F9A746 /* BaseProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0DD5F71ABA00B300F9A746 /* BaseProperties.swift */; };
+		1E0DD5FA1ABA3E8E00F9A746 /* IntuitPay.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1E0DD5F91ABA3E8E00F9A746 /* IntuitPay.plist */; };
 		1E1029AB1AB3A10E002DA6DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1029AA1AB3A10E002DA6DB /* AppDelegate.swift */; };
 		1E1029AD1AB3A10E002DA6DB /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1029AC1AB3A10E002DA6DB /* FirstViewController.swift */; };
 		1E1029AF1AB3A10E002DA6DB /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1029AE1AB3A10E002DA6DB /* SecondViewController.swift */; };
@@ -14,6 +17,10 @@
 		1E1029B41AB3A10E002DA6DB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E1029B31AB3A10E002DA6DB /* Images.xcassets */; };
 		1E1029B71AB3A10E002DA6DB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E1029B51AB3A10E002DA6DB /* LaunchScreen.xib */; };
 		1E1029C31AB3A10E002DA6DB /* IntuitPayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1029C21AB3A10E002DA6DB /* IntuitPayTests.swift */; };
+		1E1029CD1AB3A686002DA6DB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1029CC1AB3A686002DA6DB /* ProfileViewController.swift */; };
+		1E1029CF1AB3FFE0002DA6DB /* CrditCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1029CE1AB3FFE0002DA6DB /* CrditCardViewController.swift */; };
+		1E4EF98A1AE81FB300999C35 /* ProfileInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4EF9891AE81FB300999C35 /* ProfileInformation.swift */; };
+		1E9A0AC01AE7064600643B49 /* IntuitPay.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1E9A0ABE1AE7064600643B49 /* IntuitPay.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +34,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E0DD5F51AB9FC1200F9A746 /* CreditCardInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardInformation.swift; sourceTree = "<group>"; };
+		1E0DD5F71ABA00B300F9A746 /* BaseProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseProperties.swift; sourceTree = "<group>"; };
+		1E0DD5F91ABA3E8E00F9A746 /* IntuitPay.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = IntuitPay.plist; sourceTree = "<group>"; };
 		1E1029A51AB3A10E002DA6DB /* IntuitPay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntuitPay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E1029A91AB3A10E002DA6DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E1029AA1AB3A10E002DA6DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +48,10 @@
 		1E1029BC1AB3A10E002DA6DB /* IntuitPayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IntuitPayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E1029C11AB3A10E002DA6DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E1029C21AB3A10E002DA6DB /* IntuitPayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntuitPayTests.swift; sourceTree = "<group>"; };
+		1E1029CC1AB3A686002DA6DB /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		1E1029CE1AB3FFE0002DA6DB /* CrditCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrditCardViewController.swift; sourceTree = "<group>"; };
+		1E4EF9891AE81FB300999C35 /* ProfileInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileInformation.swift; sourceTree = "<group>"; };
+		1E9A0ABF1AE7064600643B49 /* IntuitPay.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = IntuitPay.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,12 +94,19 @@
 			isa = PBXGroup;
 			children = (
 				1E1029AA1AB3A10E002DA6DB /* AppDelegate.swift */,
+				1E9A0ABE1AE7064600643B49 /* IntuitPay.xcdatamodeld */,
 				1E1029AC1AB3A10E002DA6DB /* FirstViewController.swift */,
 				1E1029AE1AB3A10E002DA6DB /* SecondViewController.swift */,
 				1E1029B01AB3A10E002DA6DB /* Main.storyboard */,
+				1E1029CC1AB3A686002DA6DB /* ProfileViewController.swift */,
+				1E1029CE1AB3FFE0002DA6DB /* CrditCardViewController.swift */,
+				1E0DD5F91ABA3E8E00F9A746 /* IntuitPay.plist */,
+				1E4EF9891AE81FB300999C35 /* ProfileInformation.swift */,
 				1E1029B31AB3A10E002DA6DB /* Images.xcassets */,
 				1E1029B51AB3A10E002DA6DB /* LaunchScreen.xib */,
 				1E1029A81AB3A10E002DA6DB /* Supporting Files */,
+				1E0DD5F51AB9FC1200F9A746 /* CreditCardInformation.swift */,
+				1E0DD5F71ABA00B300F9A746 /* BaseProperties.swift */,
 			);
 			path = IntuitPay;
 			sourceTree = "<group>";
@@ -195,6 +216,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E0DD5FA1ABA3E8E00F9A746 /* IntuitPay.plist in Resources */,
 				1E1029B21AB3A10E002DA6DB /* Main.storyboard in Resources */,
 				1E1029B71AB3A10E002DA6DB /* LaunchScreen.xib in Resources */,
 				1E1029B41AB3A10E002DA6DB /* Images.xcassets in Resources */,
@@ -216,8 +238,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E1029AF1AB3A10E002DA6DB /* SecondViewController.swift in Sources */,
+				1E0DD5F61AB9FC1200F9A746 /* CreditCardInformation.swift in Sources */,
 				1E1029AB1AB3A10E002DA6DB /* AppDelegate.swift in Sources */,
+				1E4EF98A1AE81FB300999C35 /* ProfileInformation.swift in Sources */,
+				1E1029CD1AB3A686002DA6DB /* ProfileViewController.swift in Sources */,
+				1E1029CF1AB3FFE0002DA6DB /* CrditCardViewController.swift in Sources */,
 				1E1029AD1AB3A10E002DA6DB /* FirstViewController.swift in Sources */,
+				1E0DD5F81ABA00B300F9A746 /* BaseProperties.swift in Sources */,
+				1E9A0AC01AE7064600643B49 /* IntuitPay.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +437,7 @@
 				1E1029C81AB3A10E002DA6DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1E1029C91AB3A10E002DA6DB /* Build configuration list for PBXNativeTarget "IntuitPayTests" */ = {
 			isa = XCConfigurationList;
@@ -417,8 +446,22 @@
 				1E1029CB1AB3A10E002DA6DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1E9A0ABE1AE7064600643B49 /* IntuitPay.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1E9A0ABF1AE7064600643B49 /* IntuitPay.xcdatamodel */,
+			);
+			currentVersion = 1E9A0ABF1AE7064600643B49 /* IntuitPay.xcdatamodel */;
+			path = IntuitPay.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 1E10299D1AB3A10E002DA6DB /* Project object */;
 }

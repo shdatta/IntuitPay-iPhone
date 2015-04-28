@@ -51,9 +51,21 @@ class BaseProperties {
             request.addValue("application/json", forHTTPHeaderField: "Accept")
             request.HTTPBody = NSJSONSerialization.dataWithJSONObject(postData, options:nil, error: &err)
             var task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
-                var json = NSJSONSerialization.JSONObjectWithData(data, options: .MutableLeaves, error: &err) as? NSDictionary!
-                self.save(json!)
-                uiv.postData(json!)
+                var json:NSDictionary?
+                var errorDescription:String! = error?.localizedDescription
+
+                if errorDescription == nil {
+                    json = NSJSONSerialization.JSONObjectWithData(data, options: .MutableLeaves, error: &err) as? NSDictionary!
+                    let httpResp: NSHTTPURLResponse = response as! NSHTTPURLResponse
+                    if httpResp.statusCode != 200 {
+                        var errorJson:NSDictionary? = (json!.valueForKey("error")) as? NSDictionary!
+                        errorDescription = (errorJson!.valueForKey("message")) as? String!
+                    }
+                    else{
+                        self.save(json!)
+                    }
+                }
+                uiv.postData(json, error: errorDescription)
                 if let s = self as? ProfileInformation{
                     appDel.phone_info = s
                 }

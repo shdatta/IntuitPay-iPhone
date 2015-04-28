@@ -18,11 +18,17 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
     @IBOutlet var txtAmount: UITextField!
     var id:String = "";
     
-     func postData(data:NSDictionary!) ->Void{
+    func postData(data:NSDictionary?, error:String?) ->Void{
         println(data)
-        Utils.DisplayMessage("Id:" + (data.valueForKey("id") as! String) +
-            "\nStatus:" + (data.valueForKey("status") as! String) +
-            "\nAmount:" + (data.valueForKey("amount") as! String))
+        if (error != nil){
+            Utils.DisplayMessage(error!)
+            return
+        }
+        var msg:String =  "Id:" + (data!.valueForKey("id") as! String) +
+            "\nStatus:" + (data!.valueForKey("status") as! String) +
+            "\nAmount:" + (data!.valueForKey("amount") as! String) +
+            "\nMerchant:" + (data!.valueForKey("merchant") as! String)
+        Utils.DisplayMessage(msg)
     }
 
     override func viewDidAppear(animated: Bool) {
@@ -36,6 +42,7 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
         lstCards.delegate = self
         lstCards.dataSource = self
         lstCards.headerViewForSection(1)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -91,21 +98,46 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
 
     @IBAction func OnPay(sender: UIButton) {
-
-
-        let payInfo : BaseProperties = PayInformation(
-            intuitId: txtIntuitId.text, accountNumber: txtAccountNumber.text!,
-            comments: txtNotes.text!, amount: txtAmount.text, cardId: id)
+        let payInfo : PayInformation = PayInformation(
+            intuitId: self.txtIntuitId.text, accountNumber: self.txtAccountNumber.text!,
+            comments: self.txtNotes.text!, amount: self.txtAmount.text, cardId: self.id)
         
-        let errMsg:String = payInfo.validate(id)
+        let errMsg:String = payInfo.validate(self.id)
         if !errMsg.isEmpty{
             Utils.DisplayMessage(errMsg)
             return
         }
         
-        let uiv:UIViewController = self as UIViewController;
-        payInfo.postData(self)
-
+        showAlertTapped(payInfo)
+    }
+    
+    func showAlertTapped(payInfo: PayInformation?) ->Bool{
+        //Create the AlertController
+        let actionSheetController: UIAlertController = UIAlertController(title: "Alert", message: "Enter the pin", preferredStyle: .Alert)
+        
+        //Create and add the Cancel action
+        let cancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: .Cancel) { action -> Void in
+            //Do some stuff
+        }
+        actionSheetController.addAction(cancelAction)
+        //Create and an option action
+        let nextAction: UIAlertAction = UIAlertAction(title: "OK", style: .Default) { action -> Void in
+            let uiv:UIViewController = self as UIViewController;
+            println("You entered \((actionSheetController.textFields?.first as! UITextField).text)")
+            payInfo?.pin = (actionSheetController.textFields?.first as! UITextField).text
+            payInfo!.postData(self)
+        }
+        actionSheetController.addAction(nextAction)
+        //Add a text field
+        actionSheetController.addTextFieldWithConfigurationHandler {(textField: UITextField!) in
+            textField.placeholder = "pin"
+            textField.secureTextEntry = true
+            textField.textColor = UIColor.blueColor()
+        }
+            
+        //Present the AlertController
+        self.presentViewController(actionSheetController, animated: true, completion: nil)
+        return false
     }
 }
 

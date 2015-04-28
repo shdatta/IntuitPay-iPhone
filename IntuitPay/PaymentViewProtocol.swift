@@ -9,5 +9,5 @@
 import Foundation
 
 protocol PaymentViewProtocol{
-    func postData(data:NSDictionary!) ->Void
+    func postData(data:NSDictionary?, error:String?) ->Void
 }

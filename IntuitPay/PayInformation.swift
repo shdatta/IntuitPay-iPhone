@@ -17,6 +17,7 @@ class PayInformation : BaseProperties {
     var comments:String!
     var amount:String
     var cardId:String
+    var pin:String?
     
     init(intuitId:String, accountNumber:String!, comments:String!, amount:String, cardId:String) {
         self.intuitId = intuitId
@@ -40,6 +41,7 @@ class PayInformation : BaseProperties {
         params["id"] = self.cardId
         params["amount"] = self.amount
         params["intuitId"] = self.intuitId
+        params["pin"] = self.pin
         return params
     }
     

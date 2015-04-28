@@ -7,16 +7,20 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>F13C264C-72B8-4E77-A9A5-7D6682328BFF</string>
 	<key>IDESourceControlProjectName</key>
-	<string>IntuitPay</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>F59033A7037FDAED2B2FC9CD8B4B3A3DF304A17C</key>
+		<string>https://github.com/shdatta/XCode.git</string>
 		<key>F9E269DC4B558C4B1323E3223EE3736D64C4B962</key>
 		<string>https://github.com/shdatta/IntuitPay-iPhone.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>IntuitPay.xcodeproj</string>
+	<string>IntuitPay.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>F59033A7037FDAED2B2FC9CD8B4B3A3DF304A17C</key>
+		<string>../../..</string>
 		<key>F9E269DC4B558C4B1323E3223EE3736D64C4B962</key>
 		<string>../..</string>
 	</dict>
@@ -28,6 +32,14 @@
 	<string>F9E269DC4B558C4B1323E3223EE3736D64C4B962</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F59033A7037FDAED2B2FC9CD8B4B3A3DF304A17C</string>
+			<key>IDESourceControlWCCName</key>
+			<string></string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>

@@ -11,7 +11,7 @@ class ProfileViewController: UIViewController,UITableViewDataSource, UITableView
     @IBOutlet var txtPin: UITextField!
     @IBOutlet var lstCreditCards: UITableView!
     
-     func postData(data:NSDictionary!) ->Void{
+    func postData(data:NSDictionary?, error:String?) ->Void{
         
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
             self.lstCreditCards.reloadData()
